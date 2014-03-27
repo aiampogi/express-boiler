@@ -1,6 +1,8 @@
-Hackathon Starter [![Dependency Status](https://david-dm.org/aiampogi/express-boiler.png?theme=shields.io)](https://david-dm.org/aiampogi/express-boiler) [![Build Status](https://travis-ci.org/aiampogi/express-boiler.png)](https://travis-ci.org/aiampogi/express-boiler)
+Express Boiler [![Dependency Status](https://david-dm.org/aiampogi/express-boiler.png?theme=shields.io)](https://david-dm.org/aiampogi/express-boiler) [![Build Status](https://travis-ci.org/aiampogi/express-boiler.png)](https://travis-ci.org/aiampogi/express-boiler)
 =================
-A boilerplate for **Node.js** web applications using Express.
+A boilerplate for **Node.js** web applications using Express. Inspired by sahat's [Hackathon Starter](https://github.com/sahat/hackathon-starter).
+
+Will soon replace jade with handlebars.
 
 License
 -------
