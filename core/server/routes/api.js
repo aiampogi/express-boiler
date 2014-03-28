@@ -1,4 +1,4 @@
-var apiController = require('../../controllers/api');
+var apiController = require('../controllers/api');
 var middleware = require('../middleware');
 var passport = require('passport');
 

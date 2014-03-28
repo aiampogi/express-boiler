@@ -1,6 +1,6 @@
-var homeController = require('../../controllers/home');
-var userController = require('../../controllers/user');
-var contactController = require('../../controllers/contact');
+var homeController = require('../controllers/home');
+var userController = require('../controllers/user');
+var contactController = require('../controllers/contact');
 var middleware = require('../middleware');
 
 function application (app)

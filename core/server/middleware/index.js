@@ -1,13 +1,13 @@
 var express = require('express');
 var flash = require('express-flash');
 var path = require('path');
-var secrets = require('../../config/secrets');
+var secrets = require('../config/secrets');
 var passport = require('passport');
-var passportConf = require('../../config/passport');
+var passportConf = require('../config/passport');
 var MongoStore = require('connect-mongo')(express);
 var connectAssets = require('connect-assets');
 var expressValidator = require('express-validator');
-var appRoot = path.resolve(__dirname, '../../');
+var appRoot = path.resolve(__dirname, '../../../');
 
 var hour = 3600000;
 var day = (hour * 24);
