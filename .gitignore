@@ -7,12 +7,14 @@ lib-cov
 *.pid
 *.gz
 *.swp
+*.suo
 
 pids
 logs
 results
 tmp
 
+.gitattributes
 npm-debug.log
 node_modules
 bower_components

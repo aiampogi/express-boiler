@@ -19,9 +19,12 @@ function middleware(app){
 	passportConf();
 
 	app.use(connectAssets({
-		paths: ['public/css', 'public/js', 'bower_components/jquery/dist','bower_components/bootstrap/dist/js', 'bower_components/bootstrap/less'],
+		paths: [path.join(appRoot, 'public/css'),
+				path.join(appRoot, 'public/js'),
+				path.join(appRoot, 'bower_components')],
 		helperContext: app.locals
 	}));
+
 	app.use(express.compress());
 	app.use(express.favicon());
 	app.use(express.logger('dev'));
@@ -40,6 +43,7 @@ function middleware(app){
 	app.use(express.csrf());
 	app.use(passport.initialize());
 	app.use(passport.session());
+	// after passport auth store these to res.locals to be accessed when rendering the views
 	app.use(function(req, res, next) {
 		res.locals.user = req.user;
 		res.locals.token = req.csrfToken();
