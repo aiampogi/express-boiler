@@ -60,6 +60,11 @@ function middleware(app){
 		  req.session.returnTo = req.path;
 		  next();
 		});
+	// middleware to get the requested URL and use it when rendering the views (for HBS helpers especially)
+	app.use(function (req, res, next) {
+		res.locals.currentUrl = req.url;
+		next();
+	});
 	app.use(app.router);
 	app.use(function(req, res) {
 		res.status(404);

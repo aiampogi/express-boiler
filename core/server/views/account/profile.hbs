@@ -1,4 +1,4 @@
-{{!< layout}}
+{{!< ../layout}}
 <div class="page-header">
   <h3>Profile Information</h3>
 </div>
@@ -15,10 +15,10 @@
     <label for="gender" class="col-sm-2 control-label">Gender</label>
     	<div class="col-sm-4">
 	      <label class="radio">
-	        <input type="radio" checked="{{isMale user.profile}}" name="gender" value="male" data-toggle="radio"><span>Male</span>
+	        <input type="radio" checked="{{is_male user.profile}}" name="gender" value="male" data-toggle="radio"><span>Male</span>
 	      </label>
 	      <label class="radio">
-	      	<input type="radio" checked="{{isFemale user.profile}}" name="gender" value="female" data-toggle="radio"><span>Female</span>
+	      	<input type="radio" checked="{{is_female user.profile}}" name="gender" value="female" data-toggle="radio"><span>Female</span>
 	      </label>
       </div>
   </div>
