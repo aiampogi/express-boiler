@@ -28,7 +28,8 @@
     "passport-local": "~1.0.0",
     "request": "~2.34.0",
     "uglify-js": "~2.4.12",
-    "validator": "~3.5.1"
+    "validator": "~3.5.1",
+    "when": "3.0.1"
   },
   "devDependencies": {
     "mocha": "~1.17.1",
