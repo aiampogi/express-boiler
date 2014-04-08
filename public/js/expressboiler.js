@@ -11,4 +11,9 @@
 
 //= require jquery/dist/jquery.js
 //= require bootstrap/dist/js/bootstrap.js
+//= require handlebars/handlebars.js
+//= require loader.js/loader.js
+//= require ember/ember.js
+//= require ember-data/ember-data.js
+//= require ember-resolver/dist/ember-resolver.js
 //= require main
