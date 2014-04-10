@@ -13,6 +13,7 @@ pids
 logs
 results
 tmp
+.tmp
 
 .gitattributes
 npm-debug.log
@@ -25,4 +26,6 @@ Thumbs.db
 
 public/css/styles.css
 
+# Built asset files
+/core/built
 builtAssets
