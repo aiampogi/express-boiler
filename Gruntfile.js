@@ -19,7 +19,7 @@ configureGrunt = function (grunt) {
             },
             express: {
                 // Restart any time clientold or server js files change
-                files:  ['core/server.js', 'core/server/**/*.js'],
+                files:  ['core/server.js', 'core/server/**/*.js', 'core/client/*.js', 'core/client/**/*.js'],
                 tasks:  ['express:dev'],
                 options: {
                     //Without this option specified express won't be reloaded
@@ -56,7 +56,7 @@ configureGrunt = function (grunt) {
 	                templateBasePath: /core\/client\//,
 	                templateFileExtensions: /\.hbs/,
 	                templateRegistration: function (name, template) {
-	                    return grunt.config.process("define('expressBoiler/") + name + "', ['exports'], function(__exports__){ __exports__['default'] = " + template + "; });";
+	                    return grunt.config.process("define('expressboiler/") + name + "', ['exports'], function(__exports__){ __exports__['default'] = " + template + "; });";
 	                }
 	            },
 	            files: {
@@ -71,7 +71,7 @@ configureGrunt = function (grunt) {
 	        client: {
 	            type: 'amd',
 	            moduleName: function (path) {
-	                return 'expressBoiler/' + path;
+	                return 'expressboiler/' + path;
 	            },
 	            files: [{
 	                expand: true,
@@ -82,24 +82,43 @@ configureGrunt = function (grunt) {
 	        }
 	    },
 
-	    // ### Config for grunt-es6-module-transpiler
+	    // ### Config for grunt-contrib-concat-sourcemap
 	    // Compiles Ember es6 modules
 	    concat_sourcemap: {
 	        client: {
 	            src: ['.tmp/ember-transpiled/**/*.js'],
-	            dest: 'core/built/scripts/ghost-dev-ember.js',
+	            dest: 'core/built/scripts/expressboiler-ember.js',
 	            options: {
 	                sourcesContent: true
 	            }
 	        }
-	    }
+	    },
+
+        // ### Config for grunt-contrib-concat
+        // Compiles Ember es6 modules
+        concat: {
+            client: {
+                src: ['.tmp/ember-transpiled/**/*.js'],
+                dest: 'core/built/scripts/expressboiler-ember.js'
+            }
+        },
+
+        // ### Config for grunt-contrib-copy
+        // Copies necessary files to public
+        copy: {
+            main: {
+                files: [
+                { src: 'core/built/scripts/expressboiler-ember.js.map', dest: 'public/scripts/expressboiler-ember.js.map' }
+                ]
+            }
+        }
 	};
 
 
     grunt.initConfig(cfg);
 
     // All tasks related to building the Ember client code
-    grunt.registerTask('emberBuild', 'Build Ember JS & templates for development', ['emberTemplates:dev', 'transpile', 'concat_sourcemap']);
+    grunt.registerTask('emberBuild', 'Build Ember JS & templates for development', ['emberTemplates:dev', 'transpile', 'concat', 'copy']);
 
     grunt.registerTask('dev',
     	'Build JS & templates for development',

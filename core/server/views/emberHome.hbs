@@ -12,19 +12,9 @@
 		{{{css 'styles'}}}
 	</head>
 	<body>
-		<div id="wrap">
-			{{> navigation}}
-			<div class="container">
-				{{> flash}}
-				{{{body}}}
-			</div>
-		</div>
-		<div class="container">
-			{{> footer}}
-		</div>
 		{{{js 'expressboiler'}}}
-		<script>
-    	window.App = require('expressBoiler/app')['default'].create();
+		<script type="text/javascript">
+    	window.App = require('expressboiler/app')['default'].create();
     </script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];

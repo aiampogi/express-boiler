@@ -9,38 +9,6 @@ describe('GET /', function() {
   });
 });
 
-describe('GET /login', function() {
-  it('should return 200 OK', function(done) {
-    request(app)
-      .get('/login')
-      .expect(200, done);
-  });
-});
-
-describe('GET /forgot', function() {
-  it('should return 200 OK', function(done) {
-    request(app)
-      .get('/forgot')
-      .expect(200, done);
-  });
-});
-
-describe('GET /signup', function() {
-  it('should return 200 OK', function(done) {
-    request(app)
-      .get('/signup')
-      .expect(200, done);
-  });
-});
-
-describe('GET /contact', function() {
-  it('should return 200 OK', function(done) {
-    request(app)
-      .get('/contact')
-      .expect(200, done);
-  });
-});
-
 describe('GET /random-url', function() {
   it('should return 404', function(done) {
     request(app)

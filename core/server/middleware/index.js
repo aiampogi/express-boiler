@@ -21,7 +21,7 @@ function middleware(app){
 	app.use(connectAssets({
 		paths: [path.join(appRoot, 'public/css'),
 				path.join(appRoot, 'public/js'),
-				path.join(appRoot, 'core/client'),
+				path.join(appRoot, 'core/built'),
 				path.join(appRoot, 'bower_components')],
 		helperContext: app.locals
 	}));

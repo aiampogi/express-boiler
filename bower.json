@@ -1,7 +1,7 @@
 {
   "name": "express-boiler",
   "description": "A boiler plate for express apps inspired by the hackathon-starter",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Aia Patag",
   "homepage": "http://aiampogi.github.io/express-boiler/‎",
   "repository": {
@@ -35,10 +35,11 @@
   "dependencies": {
     "ember": "~1.5.0",
     "ember-data": "~1.0.0-beta.7",
-    "ember-resolver": "https://github.com/stefanpenner/ember-jj-abrams-resolver.git",
-    "loader.js": "https://github.com/stefanpenner/loader.js",
+    "ember-resolver": "git://github.com/stefanpenner/ember-jj-abrams-resolver.git#181251821cf513bb58d3e192faa13245a816f75e",
+    "loader.js": "git://github.com/stefanpenner/loader.js",
     "jquery": "~2.1.0",
     "bootstrap": "~3.1.1",
+    "ember-addons.bs_for_ember": "0.6.1",
     "font-awesome": "~4.0.0",
     "animate.css": "~3.1.0"
   },
