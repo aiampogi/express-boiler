@@ -9,6 +9,7 @@ Router.reopen({
 });
 
 Router.map(function () {
+    this.route('about');
     // this.route('signin');
     // this.route('signup');
     // this.route('forgotten');
