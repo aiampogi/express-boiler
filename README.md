@@ -1,5 +1,5 @@
 Express Boiler [![Dependency Status](https://david-dm.org/aiampogi/express-boiler.png?theme=shields.io)](https://david-dm.org/aiampogi/express-boiler) [![Build Status](https://travis-ci.org/aiampogi/express-boiler.png)](https://travis-ci.org/aiampogi/express-boiler)
-=================
+==================
 A boilerplate/starterplate for **Node.js** web applications using [Express](https://github.com/visionmedia/express), [Connect-Assets](https://github.com/adunkman/connect-assets/), [Handlebars](http://handlebarsjs.com/), and [MongoDB](https://www.mongodb.org/). Inspired by sahat's [Hackathon Starter](https://github.com/sahat/hackathon-starter).
 
 Will soon decouple DB for flexibility.
