@@ -8,6 +8,7 @@ var MongoStore = require('connect-mongo')(express);
 var connectAssets = require('connect-assets');
 var expressValidator = require('express-validator');
 var appRoot = path.resolve(__dirname, '../../../');
+var session = require('express-session');
 
 var hour = 3600000;
 var day = (hour * 24);
@@ -34,7 +35,7 @@ function middleware(app){
 	app.use(express.urlencoded());
 	app.use(expressValidator());
 	app.use(express.methodOverride());
-	app.use(express.session({
+	app.use(session({
 		secret: secrets.sessionSecret,
 		store: new MongoStore({
 			url: secrets.db,
